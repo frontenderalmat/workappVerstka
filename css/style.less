@@ -1,0 +1,183 @@
+*{
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+    margin: 0;
+    &::selection{
+        background: #2ABF88;
+    }
+}
+
+.container{
+    max-width: 1200px;
+    margin: 25px auto;
+    box-shadow: 0 0 4px #666;
+    overflow: hidden;
+}
+
+.row{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.sidenav{
+    min-height: 600px;
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    
+    #zh{
+        flex-basis: 200px;
+        background: #2ABF88;
+        text-align: center;
+        #logo{
+            padding: 10px;
+            width: 200px;
+            transform: rotate(-45deg) translate(-55px, -50px);
+            background: white;
+            position: absolute;
+        }
+        figure{
+            margin-top: 40px;
+            img{
+                max-width: 100px;
+                height: auto;
+            }
+            span{
+                display: block;
+                color: white;
+                margin-top: 15px;
+            }
+        }
+    }
+    .menu{
+        border-right: 1px solid #EEE;
+        ul{
+            list-style-type: none;
+            margin-top: 10px;
+            li{
+                color: #666;
+                cursor: pointer;
+                padding: 10px 15px;
+                transition: background 0.5s;
+                &:hover{
+                    background: #E6E6E6;
+                }
+            }
+        }
+    }
+}
+
+.content{
+    flex-basis: 100px;
+    flex-grow: 10;
+
+    #searchBlock{
+        height: 40px;
+        max-width: 100%;
+        background: #2ABF88;
+        padding: 15px;
+        box-shadow: 0 0 1px 0 #EEE;
+        display: flex;
+        flex-direction: row;
+        #searchInput{
+            flex-basis: 100px;
+            padding: 9px;
+            border-radius: 5px 0 0 5px;
+            border: none;
+            box-shadow: 0 0 1px #666;
+            font-size: 17px;
+            color: #666;
+            padding-left: 15px;
+
+            flex-grow: 4;
+        }
+        #searchButton{
+            padding: 11px 10px;
+            background: white;
+            color: #666;
+            font-size: 110%;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+    #banner{
+        min-height: 250px;
+        width: 100%;
+        background: #EEE;
+    }
+
+    #header{
+        text-align: center;
+        h2{
+            font-weight: lighter;
+        }
+        padding-bottom: 5px;
+        border-bottom: 1px solid #EEE;
+    }
+
+    .gridRow{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 5px;
+        .col{
+            flex-basis: 250px;
+            flex-grow: 1;
+            margin: 10px;
+            background: #eee;
+            height: 150px;
+            span{
+                display: block;
+                margin: 35px;
+                text-align: center;
+                cursor: pointer;
+                font-size: 110%;
+                .fa{
+                    font-size: 150%;
+                }
+            }
+        }
+        margin-bottom: 50px;
+    }
+
+}
+.modalWR{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(200, 200, 200, 0.5);
+    z-index: 99;
+
+    .modal{
+        max-width: 600px;
+        margin: 200px auto;
+        background: white;
+        overflow: hidden;
+        .mHeader{
+            border-bottom: 1px solid #EEE;
+            padding: 10px;
+
+            .close{
+                float: right;
+                font-size: 150%;
+                transform: translate(42px, -50px);
+            }
+
+        }
+        .mBody{
+            padding: 10px;
+            border-bottom: 1px solid #EEE;
+        }
+        .mFooter{
+            padding: 10px;
+        }
+    }
+
+}
